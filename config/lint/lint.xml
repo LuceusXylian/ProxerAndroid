@@ -1,35 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <lint>
     <!-- Disable expensive and/or irrelevant checks. -->
-    <issue id="DuplicateStrings" severity="ignore" />
-    <issue id="GoogleAppIndexingApiWarning" severity="ignore" />
-    <issue id="SelectableText" severity="ignore" />
-    <issue id="SyntheticAccessor" severity="ignore" />
-    <issue id="ImplicitSamInstance" severity="ignore" />
-    <issue id="GradleDependency" severity="ignore" />
+    <issue id="IntentFilterUniqueDataAttributes" severity="ignore" />
 
-    <!-- Disable checks not working properly. -->
-    <issue id="IconExpectedSize" severity="ignore" />
-    <issue id="NullSafeMutableLiveData" severity="ignore" />
-    <issue id="UnpackedNativeCode" severity="ignore" />
-
-    <!-- Ignore errors about packages not contained in Android. These are safe. -->
-    <issue id="InvalidPackage" severity="error">
-        <ignore regexp=".*okio.*" />
-        <ignore regexp=".*retrofit.*" />
-        <ignore regexp="org.checkerframework.checker.signedness.SignednessUtil" />
-    </issue>
-
-    <!-- Gifs are not the best option performance-wise. Look later for a better alternative. -->
-    <issue id="GifUsage">
-        <ignore regexp="res/drawable-nodpi/o_.*[.]gif" />
-    </issue>
-
-    <!-- Ignore false positive about jsoup trusting all certificates. -->
-    <!-- This is just a development tool, disabled by default and we do not even use the HTTP stack of Jsoup. -->
-    <issue id="TrustAllX509TrustManager">
-        <ignore regexp=".*org.jsoup.*" />
-    </issue>
 
     <!-- Enable all lint checks with error severity, except for those listed above. -->
     <issue id="all" severity="error" />

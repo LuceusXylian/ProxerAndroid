@@ -1,0 +1,39 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <attr name="colorPrimaryLight" format="color|reference" />
+
+    <attr name="colorSecondaryLight" format="color|reference" />
+    <attr name="colorSecondaryDark" format="color|reference" />
+
+    <attr name="colorSelectedSurface" format="color|reference" />
+    <attr name="colorSelectedBackground" format="color|reference" />
+
+    <attr name="colorDivider" format="color|reference" />
+    <attr name="colorIcon" format="color|reference" />
+    <attr name="colorIconDisabled" format="color|reference" />
+
+    <attr name="colorLink" format="color|reference" />
+
+    <attr name="colorFastscrollTrack" format="color|reference" />
+    <attr name="colorFastscrollThumb" format="color|reference" />
+
+    <declare-styleable name="ExpandableSelectionView">
+        <attr name="titleText" format="string" />
+        <attr name="singleSelection" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="MaxLineFlexboxLayout">
+        <attr name="maxLines" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="BBCodeView">
+        <attr name="text" format="string" />
+        <attr name="textColor" format="color" />
+        <attr name="textSize" format="dimension" />
+        <attr name="textAppearance" format="reference" />
+        <attr name="maxHeight" format="dimension" />
+        <attr name="spoilerTextColor" format="color" />
+    </declare-styleable>
+
+    <!-- Workaround for missing style.
+    <attr name="ringtonePreferenceStyle" tools:ignore="PrivateResource" />-->
+</resources>

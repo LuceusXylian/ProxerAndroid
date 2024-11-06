@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/create_chat"
+        android:title="@string/action_send_message"
+        android:icon="@drawable/cmd_message_text"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/new_group"
+        android:title="@string/action_new_group_with_user"
+        android:icon="@drawable/cmd_account_multiple_plus"
+        app:showAsAction="ifRoom" />
+</menu>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/toggle_orientation"
+        android:title="@string/fragment_manga_toggle_orientation"
+        app:iconTint="?attr/colorOnPrimary"
+        android:icon="@drawable/cmd_swap_vertical"
+        app:showAsAction="ifRoom" />
+</menu>

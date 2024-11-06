@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/preview"
+        android:title="@string/action_preview"
+        android:icon="@drawable/cmd_eye"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/publish"
+        android:title="@string/action_publish"
+        android:icon="@drawable/cmd_send"
+        app:showAsAction="always" />
+</menu>

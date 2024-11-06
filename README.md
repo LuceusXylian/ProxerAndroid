@@ -86,9 +86,9 @@ gradlew.bat assembleDebug
 |------------------------------|------------------------------------|--------------------------------------|
 | ![](art/screenshot/news.png) | ![](art/screenshot/anime-list.png) | ![](art/screenshot/manga-reader.png) |
 
-| Media Detail                         | Instant Chat                            | Public Chat                         |
-|--------------------------------------|-----------------------------------------|-------------------------------------|
-| ![](art/screenshot/media-detail.png) | ![](art/screenshot/conference-list.png) | ![](art/screenshot/public-chat.png) |
+| Media Detail                         | Instant Chat                            |
+|--------------------------------------|-----------------------------------------|
+| ![](art/screenshot/media-detail.png) | ![](art/screenshot/conference-list.png) |
 
 | Anime Stream List                     | Anime Player                       |
 |---------------------------------------|------------------------------------|

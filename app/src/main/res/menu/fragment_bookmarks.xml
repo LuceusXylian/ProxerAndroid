@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/filter"
+        android:title="@string/action_filter"
+        android:icon="@drawable/cmd_filter_variant"
+        app:showAsAction="ifRoom">
+
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/all"
+                    android:title="@string/action_filter_all"
+                    app:showAsAction="never" />
+
+                <item
+                    android:id="@+id/anime"
+                    android:title="@string/action_filter_anime"
+                    app:showAsAction="never" />
+
+                <item
+                    android:id="@+id/manga"
+                    android:title="@string/action_filter_manga"
+                    app:showAsAction="never" />
+            </group>
+
+            <item
+                android:id="@+id/filterAvailable"
+                android:checkable="true"
+                android:title="@string/action_filter_available" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/search"
+        android:title="@string/action_search"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        android:icon="@drawable/cmd_magnify"
+        app:showAsAction="always|collapseActionView" />
+</menu>

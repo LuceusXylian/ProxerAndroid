@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data-extraction-rules>
+    <cloud-backup>
+
+        <exclude
+            domain="database"
+            path="androidx.work.workdb" />
+        <exclude
+            domain="database"
+            path="androidx.work.workdb-shm" />
+        <exclude
+            domain="database"
+            path="androidx.work.workdb-wal" />
+
+        <exclude
+            domain="database"
+            path="chat.db" />
+        <exclude
+            domain="database"
+            path="chat.db-shm" />
+        <exclude
+            domain="database"
+            path="chat.db-wal" />
+
+        <exclude
+            domain="sharedpref"
+            path="me.proxer.encrypted_preferences.xml" />
+    </cloud-backup>
+</data-extraction-rules>

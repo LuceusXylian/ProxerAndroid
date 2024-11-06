@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/report"
+        android:title="@string/action_report"
+        app:iconTint="?attr/colorOnPrimary"
+        android:icon="@drawable/cmd_alert_octagon"
+        app:showAsAction="ifRoom" />
+</menu>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/red"
+        android:title="@string/fragment_edit_comment_color_red"
+        app:iconTint="@color/red_600"
+        android:icon="@drawable/cmd_checkbox_blank_circle"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/purple"
+        android:title="@string/fragment_edit_comment_color_purple"
+        app:iconTint="@color/purple_600"
+        android:icon="@drawable/cmd_checkbox_blank_circle"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/blue"
+        android:title="@string/fragment_edit_comment_color_blue"
+        app:iconTint="@color/blue_600"
+        android:icon="@drawable/cmd_checkbox_blank_circle"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/green"
+        android:title="@string/fragment_edit_comment_color_green"
+        app:iconTint="@color/green_600"
+        android:icon="@drawable/cmd_checkbox_blank_circle"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/yellow"
+        android:title="@string/fragment_edit_comment_color_yellow"
+        app:iconTint="@color/yellow_600"
+        android:icon="@drawable/cmd_checkbox_blank_circle"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/orange"
+        android:title="@string/fragment_edit_comment_color_orange"
+        app:iconTint="@color/orange_600"
+        android:icon="@drawable/cmd_checkbox_blank_circle"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/grey"
+        android:title="@string/fragment_edit_comment_color_grey"
+        app:iconTint="@color/grey_600"
+        android:icon="@drawable/cmd_checkbox_blank_circle"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/white"
+        android:title="@string/fragment_edit_comment_color_white"
+        android:icon="@drawable/cmd_checkbox_blank_circle_outline"
+        app:showAsAction="ifRoom" />
+</menu>
