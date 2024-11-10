@@ -16,7 +16,6 @@ import com.bumptech.glide.module.AppGlideModule
 import com.bumptech.glide.request.RequestOptions
 import me.proxer.app.util.data.PreferenceHelper
 import me.proxer.app.util.extension.safeInject
-import me.proxer.library.BuildConfig
 import okhttp3.OkHttpClient
 import java.io.InputStream
 

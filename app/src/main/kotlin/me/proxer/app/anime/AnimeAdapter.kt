@@ -16,6 +16,7 @@ import com.mikepenz.iconics.typeface.library.community.material.CommunityMateria
 import com.mikepenz.iconics.utils.colorInt
 import com.mikepenz.iconics.utils.paddingDp
 import com.mikepenz.iconics.utils.sizeDp
+import com.uber.autodispose.ObservableSubscribeProxy
 import io.reactivex.subjects.PublishSubject
 import me.proxer.app.GlideRequests
 import me.proxer.app.R
@@ -126,21 +127,21 @@ class AnimeAdapter(
 
     inner class StreamViewHolder(itemView: View) : AutoDisposeViewHolder(itemView) {
 
-        internal val nameContainer: ViewGroup by bindView(R.id.nameContainer)
-        internal val name: TextView by bindView(R.id.name)
-        internal val image: ImageView by bindView(R.id.image)
+        internal val nameContainer: ViewGroup = itemView.findViewById(R.id.nameContainer)
+        internal val name: TextView = itemView.findViewById(R.id.name)
+        internal val image: ImageView = itemView.findViewById(R.id.image)
 
-        internal val uploadInfoContainer: ViewGroup by bindView(R.id.uploadInfoContainer)
-        internal val uploaderText: TextView by bindView(R.id.uploader)
-        internal val translatorGroup: TextView by bindView(R.id.translatorGroup)
-        internal val dateText: TextView by bindView(R.id.date)
+        internal val uploadInfoContainer: ViewGroup = itemView.findViewById(R.id.uploadInfoContainer)
+        internal val uploaderText: TextView = itemView.findViewById(R.id.uploader)
+        internal val translatorGroup: TextView = itemView.findViewById(R.id.translatorGroup)
+        internal val dateText: TextView = itemView.findViewById(R.id.date)
 
-        internal val adAlert: ViewGroup by bindView(R.id.adAlert)
-        internal val dismissAdAlert: Button by bindView(R.id.dismissAdAlert)
-        internal val setAdInterval: Button by bindView(R.id.setAdInterval)
+        internal val adAlert: ViewGroup = itemView.findViewById(R.id.adAlert)
+        internal val dismissAdAlert: Button = itemView.findViewById(R.id.dismissAdAlert)
+        internal val setAdInterval: Button = itemView.findViewById(R.id.setAdInterval)
 
-        internal val info: TextView by bindView(R.id.info)
-        internal val play: Button by bindView(R.id.play)
+        internal val info: TextView = itemView.findViewById(R.id.info)
+        internal val play: Button = itemView.findViewById(R.id.play)
 
         fun bind(item: AnimeStream) {
             val isLoginRequired = !item.isPublic && !storageHelper.isLoggedIn
@@ -294,7 +295,7 @@ class AnimeAdapter(
 
         private fun generatePlayDrawable(): IconicsDrawable {
             return IconicsDrawable(play.context, CommunityMaterial.Icon3.cmd_play).apply {
-                colorInt = play.context.resolveColor(R.attr.colorOnPrimary)
+                colorInt = play.context.resolveColor(com.google.android.material.R.attr.colorOnPrimary)
                 paddingDp = 8
                 sizeDp = 28
             }
@@ -310,18 +311,29 @@ class AnimeAdapter(
 
     inner class MessageViewHolder(itemView: View) : AutoDisposeViewHolder(itemView) {
 
-        internal val message: BetterLinkTextView by bindView(R.id.message)
+        internal val message: BetterLinkTextView = itemView.findViewById(R.id.message)
 
         fun bind(item: AnimeStream) {
             val messageText = (item.resolutionResult as StreamResolutionResult.Message).message
 
             message.linkClicks()
-                .map { it.toHttpUrlOrNull().toOptional() }
-                .filterSome()
+                .map {
+                    val messageUrl = it.toHttpUrlOrNull()
+                    if (messageUrl == null) {
+                        System.err.println("[AnimeAdapter] messageUrl should not be null: $it")
+                        ""
+                    } else {
+                        messageUrl
+                    }
+                }
+                .filter { it.toString().isNotBlank() }
                 .autoDispose(this)
                 .subscribe(linkClickSubject)
 
             message.text = messageText
         }
     }
+}
+
+private fun <T> ObservableSubscribeProxy<T>.subscribe(linkClickSubject: T) {
 }

@@ -21,5 +21,5 @@ abstract class StreamResolver {
     protected val moshi by safeInject<Moshi>()
 
     open fun supports(name: String) = name.equals(this.name, true)
-    abstract fun resolve(id: String): Single<StreamResolutionResult>
+    abstract fun resolve(id: String): io.reactivex.Single<StreamResolutionResult>
 }

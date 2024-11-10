@@ -24,7 +24,6 @@ import me.proxer.app.R
 import me.proxer.app.anime.resolver.StreamResolutionResult
 import me.proxer.app.auth.LoginDialog
 import me.proxer.app.base.BaseAdapter.ContainerPositionResolver
-import me.proxer.app.base.BaseContentFragment
 import me.proxer.app.info.translatorgroup.TranslatorGroupActivity
 import me.proxer.app.profile.ProfileActivity
 import me.proxer.app.profile.settings.ProfileSettingsActivity
